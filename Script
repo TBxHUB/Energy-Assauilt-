@@ -1,0 +1,29 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("TS HUB: Energy Assault", "Sentinel")
+
+local Main = Window:NewTab("Script")
+local MainSection = Main:NewSection("Main")
+
+MainSection:NewButton("Silent Aim", "", function()
+getgenv().fov = math.huge
+getgenv().hitpart = "Head"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Spoorloos/scripts/main/energy_assault_silent_aim.lua"))()
+end)
+
+MainSection:NewButton("Kill All", "", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MisterGunXD/yes/main/ea_fixed.lua"))();
+end)
+
+MainSection:NewButton("Fly", "Press E", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/KtLKcbxr", ture))()
+end)
+
+MainSection:NewSlider("Walk Speed", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+local Main2 = Window:NewTab("Credit")
+local Main2Section = Main2:NewSection("TB")
+local Main2Section = Main2:NewSection("Toby")
+local Main2Section = Main2:NewSection("Mike")
+local Main2Section = Main2:NewSection("Zack")
